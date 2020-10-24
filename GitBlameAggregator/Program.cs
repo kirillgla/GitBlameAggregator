@@ -11,6 +11,7 @@ namespace GitBlameAggregator
         {
             ".git", "out", "bin", "artifacts"
         };
+
         private static void Main(string[] args)
         {
             if (!args.Any())
