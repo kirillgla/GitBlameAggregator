@@ -18,10 +18,11 @@ namespace GitBlameAggregator
 
         public void PrintResults(TextWriter writer)
         {
+            writer.WriteLine();
             int maxKeyLength = GlobalResult.Contributions.Keys.Select(key => key.Length).Max();
             foreach (var contribution in GlobalResult.Contributions)
             {
-                writer.Write($"{{0,-{maxKeyLength}}}", contribution.Key);
+                writer.WriteLine($"{{0,-{maxKeyLength}}} {{1}}", contribution.Key, contribution.Value);
             }
         }
     }
